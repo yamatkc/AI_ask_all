@@ -1,15 +1,38 @@
+# ===== Android =====
 *.iml
-.gradle
-/local.properties
-/.idea
-.kotlin
-**/build
-/captures
-.externalNativeBuild
-.cxx
+.gradle/
 local.properties
-*.apk
-*.ap_
-*.dex
+.idea/
+*.keystore
+!debug.keystore
+
+# Built outputs
+build/
+app/build/
+
+# Kotlin
 *.class
+*.jar
+*.dex
+
+# ProGuard
+proguard/
+
+# Logs
+*.log
+
+# OS files
 .DS_Store
+Thumbs.db
+desktop.ini
+
+# Gradle wrapper (任意: jarはコミットしてもよい)
+gradle/wrapper/gradle-wrapper.jar
+
+# Android Studio captures
+captures/
+
+# Signing config (絶対に除外)
+*.jks
+*.keystore
+keystore.properties
