@@ -64,15 +64,3 @@ dependencies {
     implementation(libs.browser)
     debugImplementation(libs.androidx.ui.tooling)
 }
-
-tasks.register("gitPull") {
-    doLast {
-        exec {
-            commandLine("git", "pull")
-        }
-    }
-}
-
-tasks.named("preBuild") {
-    dependsOn("gitPull")
-}
