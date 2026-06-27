@@ -859,17 +859,3 @@ class GrokAdapter : ProviderAdapter {
 ```xml
 android:windowSoftInputMode="adjustResize"
 ```
-
----
-
-## 開発運用ルール（2026年6月更新）
-
-- メインの開発はGitHub上で行う方針に変更した。
-- Claude Codeでの編集はブランチ（claude/〜）で行い、
-  master へのマージ/PRを経てから反映する。
-- Android Studio側は app/build.gradle.kts に追加した
-  自動git pull設定（preBuild時にgitPullタスクが実行される）により、
-  ビルドのたびに自動で最新コードを取得する。
-  これにより、pull忘れによる古いコードでのビルド事故を防止する。
-- 上記の自動pull設定があるため、ローカルで手動の git pull は基本的に不要。
-  ただしブランチを切り替える場合は明示的に pull/checkout を行うこと。
